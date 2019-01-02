@@ -1,0 +1,59 @@
+<% include partials/header.ejs %>
+
+<div class="ui container segment">
+
+    <h2 class="ui icon header">
+      <i class="plus icon"></i>
+      <div class="content">Create a new post!</div>
+    </h2>
+    <form action="/news/create" method="POST" class="ui form">
+      <div class="field">
+        <div class="ui input ">
+          <input
+            type="text"
+            name="tech[author]"
+            placeholder="Write your name!"
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="ui input ">
+          <input type="text" name="tech[title]" placeholder="Title" />
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui input ">
+          <textarea
+            name="tech[content]"
+            id=""
+            placeholder="Write the conent of your post here!"
+            cols="30"
+            rows="10"
+          ></textarea>
+        </div>
+      </div>
+      <div class="field">
+        <div class="ui input ">
+          <input
+            type="link"
+            name="tech[image]"
+            placeholder="If you want an image added to your post link it here."
+          />
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="ui labeled input">
+          <div class="ui label">http://</div>
+          <input type="text" placeholder="source" />
+        </div>
+      </div>
+      <a href="/news">
+        <button class="ui inverted teal button">
+          <i class="icon plus"></i> Create post
+        </button>
+      </a>
+    </form>
+  </div>
+</div>

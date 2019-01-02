@@ -1,0 +1,46 @@
+<% include partials/header.ejs %>
+<div class="ui container segment show">
+  <div class="ui grid">
+    <div class="row">
+      <div class="eight wide column">
+        <img class="image post" src="<%=tech.image%>" alt="" />
+      </div>
+      <div class="four wide column info"></div>
+      <div class="three wide column info">
+        <h1>Author</h1>
+        <div class="ui card">
+          <div class="image">
+            <img
+              src="https://semantic-ui.com/images/avatar2/large/kristy.png"
+            />
+          </div>
+          <div class="content">
+            <a class="header"><%=tech.author%></a>
+            <div class="meta"><span class="date">Joined in 2013</span></div>
+            <div class="description">
+              Kristy is an art director living in New York.
+            </div>
+          </div>
+          <div class="extra content">
+            <a> <i class="user icon"></i><%=tech.upvotes%>5 Total upvotes!</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="centered row">
+      <div class="ui centered colum"><h1><%=tech.title%></h1></div>
+    </div>
+    <div class="centered row">
+      <div class="ui twelve wide column"><p><%=tech.content%></p></div>
+    </div>
+    <div class="centered row">
+      <a href="/news"> <button class="ui inverted red button">back</button> </a>
+      <a href="/news/<%=tech._id%>/edit">
+        <button class="ui inverted teal button">Edit</button>
+      </a>
+      <form action="/news/<%=tech._id%>?_method=DELETE" method="POST">
+        <button class="ui inverted red button">Delete</button>
+      </form>
+    </div>
+  </div>
+</div>

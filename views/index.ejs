@@ -1,0 +1,39 @@
+
+<% include partials/header.ejs %>
+<div class="ui segment container">
+<div class="ui one column doubling stackable grid container">
+<% tech.forEach(function(tech){%>
+
+<div class="column post">
+ <div class="postContent">
+  <img class="ui wireframe image" src="<%=tech.image%>">
+   
+
+   <div class="ui hidden divider">
+   <div class="ui content container">
+  <p>The contents of this posts contains </p>
+  <p> <%=tech.content.substring(0,250)%> </p>
+  <p>Post is made by <%= tech.author %>
+  <br>
+  </div>
+  <a href="/news/<%=tech._id%>">
+  <button class="ui inverted blue button" id="moreInfo" >More Info! </button>
+ </a>
+
+  </div>
+  </div>
+  </div>
+ 
+
+<% }) %>
+<div class="ui container">
+<p>It seems like you have reached the end :o!</p>
+<p>Would you like to create a new post?</p>
+<a href="/news/create">
+<button class="ui inverted green button">Create New </button>
+</a>
+</div>
+</div>
+</div>
+</div>
+<% include partials/footer.ejs %>

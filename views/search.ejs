@@ -1,0 +1,24 @@
+<% include partials/header.ejs %>
+<div class="ui container segment search">
+  <div class="ui grid">
+    <div class="centered row"><h1>Search for post title or by author!</h1></div>
+    <div class="centered row">
+      <div class="ui icon big input">
+        <input type="text" placeholder="Search..." />
+        <i class="search icon"></i>
+      </div>
+    </div>
+    <div class="centered row">
+      <button class="ui inverted big green button">Search</button>
+    </div>
+  </div>
+</div>
+
+<script>
+  document
+    .querySelector("input")
+    .addEventListener("keypress", function(keypressed) {
+      if (keypressed.keyCode == 13) {
+      }
+    });
+</script>
